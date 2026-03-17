@@ -1,4 +1,52 @@
 (function () {
+  // Load reviews: try live Netlify function first, then fall back to reviews.json (SEO: noscript has fallback)
+  var container = document.getElementById('reviews-container');
+  if (!container) return;
+
+  function renderReviews(data) {
+    var reviews = data.reviews || [];
+    if (reviews.length === 0) return;
+    container.innerHTML = '';
+    reviews.forEach(function (review) {
+      var stars = '';
+      for (var i = 0; i < (review.rating || 5); i++) stars += '<span class="review-star" aria-hidden="true">★</span>';
+      var card = document.createElement('article');
+      card.className = 'review-card';
+      card.setAttribute('itemscope', '');
+      card.setAttribute('itemtype', 'https://schema.org/Review');
+      card.innerHTML =
+        '<div class="review-stars" aria-label="' + (review.rating || 5) + ' out of 5 stars">' + stars + '</div>' +
+        '<blockquote class="review-text" itemprop="reviewBody"><p>' + escapeHtml(review.text || '') + '</p></blockquote>' +
+        '<footer class="review-author">' +
+        '<cite itemprop="author" itemscope itemtype="https://schema.org/Person"><span itemprop="name">' + escapeHtml(review.author || 'Client') + '</span></cite>' +
+        '<span class="review-source"> — ' + escapeHtml(review.source || 'Google') + ' Review</span></footer>';
+      container.appendChild(card);
+    });
+  }
+  function escapeHtml(s) {
+    var div = document.createElement('div');
+    div.textContent = s;
+    return div.innerHTML;
+  }
+
+  // Try live API (Netlify function) first, then static JSON
+  fetch('/.netlify/functions/get-reviews')
+    .then(function (r) { return r.json(); })
+    .then(function (data) {
+      if (data.reviews && data.reviews.length > 0) renderReviews(data);
+      else return fetch('reviews.json').then(function (r) { return r.ok ? r.json() : Promise.reject(); });
+    })
+    .then(function (data) {
+      if (data && data.reviews && data.reviews.length > 0) renderReviews(data);
+    })
+    .catch(function () {
+      fetch('reviews.json')
+        .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+        .then(renderReviews)
+        .catch(function () {});
+    });
+})();
+(function () {
   // Header contrast: original cream over blue, navy over cream
   var header = document.querySelector('.header');
   var sections = document.querySelectorAll('[data-bg]');
