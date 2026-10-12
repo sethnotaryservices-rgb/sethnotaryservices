@@ -166,9 +166,9 @@ a{color:inherit;text-decoration:none;}
 .service-card a.service-more{display:inline-block;margin-top:0.85rem;color:var(--gold);font-weight:700;}
 .service-card a.service-more:hover{color:var(--gold-light);}
 .page-hero.hero-remodel .hero-inner{max-width:860px;}
-.page-hero.hero-remodel .hero-title{white-space:normal;width:auto;max-width:860px;position:static;left:auto;transform:none;overflow:visible;font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;color:var(--white);}
+.page-hero.hero-remodel .hero-title{white-space:normal;width:auto;max-width:860px;position:static;left:auto;transform:none;overflow:visible;font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;color:var(--white);margin-left:auto;margin-right:auto;text-align:center;}
 .page-hero.hero-remodel .section-label{color:var(--gold);}
-.page-hero.hero-remodel .hero-desc{max-width:760px;}
+.page-hero.hero-remodel .hero-desc{max-width:760px;margin-left:auto;margin-right:auto;text-align:center;}
 .step-card,.note-card{background:linear-gradient(180deg,rgba(212,175,55,0.06) 0%,var(--white) 100%);border:2px solid var(--gold);border-radius:12px;box-shadow:var(--shadow);}
 .step-card{padding:1.5rem;}
 .note-card{padding:1.75rem;}
