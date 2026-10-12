@@ -151,6 +151,7 @@ a{color:inherit;text-decoration:none;}
 .about-panel-card p{font-size:0.95rem;margin:0;color:var(--text-muted);line-height:1.4;}
 .trust-strip{background:var(--navy);padding:1.25rem 1.5rem;}
 .trust-strip-inner{max-width:700px;margin:0 auto;display:flex;flex-wrap:wrap;justify-content:center;gap:1.5rem 2rem;}
+.trust-strip-single .trust-strip-inner{max-width:none;flex-wrap:nowrap;overflow-x:auto;white-space:nowrap;}
 .trust-item{display:inline-flex;align-items:center;gap:0.5rem;font-size:1rem;color:rgba(255,255,255,0.9);font-weight:500;}
 .trust-dot{width:6px;height:6px;border-radius:50%;background:var(--gold);flex-shrink:0;}
 .services-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:1.5rem;margin-top:2rem;}
