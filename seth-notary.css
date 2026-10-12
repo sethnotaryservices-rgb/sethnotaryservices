@@ -105,7 +105,10 @@ a{color:inherit;text-decoration:none;}
 .certs-bar-card p{font-size:0.95rem;margin:0;color:var(--text-muted);line-height:1.4;}
 .certs-bar-icons{margin-top:1.5rem;justify-content:center;}
 .certs-bar-pill{display:inline-block;padding:0.5rem 1rem;background:var(--navy);color:var(--gold);border-radius:8px;font-size:0.75rem;font-weight:600;}
-#about,#services,#service-areas,#reviews,#contact{scroll-margin-top:6rem;}
+.certs-award{margin:1.75rem auto 0;width:min(280px,100%);}
+.certs-award img{display:block;width:100%;height:auto;border-radius:10px;border:2px solid var(--gold);box-shadow:var(--shadow);}
+.award-reviews-note{margin:0 0 1.5rem;max-width:760px;color:var(--text-muted);font-size:1.05rem;}
+#about,#services,#service-areas,#reviews,#contact,#award{scroll-margin-top:6rem;}
 .reviews-section{padding:4rem 1.5rem;}
 .reviews-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;margin-top:1.5rem;}
 .review-card{background:#fff;border-radius:8px;padding:1.25rem 1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.12),0 1px 2px rgba(0,0,0,0.08);border:1px solid #e0e0e0;transition:box-shadow 0.2s;}
