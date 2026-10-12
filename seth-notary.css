@@ -34,7 +34,7 @@ a{color:inherit;text-decoration:none;}
 .section-title .accent{color:var(--gold);}
 .section-title-single{white-space:nowrap;overflow-x:auto;max-width:100%;}
 .section-desc{margin:0 0 2.5rem 0;max-width:560px;color:var(--text-muted);font-size:1.05rem;}
-.section-desc.section-desc-single-line{max-width:100%;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;font-size:clamp(0.68rem,0.8vw + 0.55rem,1.05rem);line-height:1.45;padding-bottom:0.25rem;}
+.section-desc.section-desc-single-line{width:100%;max-width:100%;white-space:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:thin;font-size:clamp(0.68rem,0.8vw + 0.55rem,1.05rem);line-height:1.45;padding-bottom:0.25rem;}
 .section-desc.section-desc-single-line::-webkit-scrollbar{height:4px;}
 .section-desc.section-desc-single-line::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px;}
 .section-desc-single{white-space:nowrap;}
@@ -72,6 +72,9 @@ a{color:inherit;text-decoration:none;}
 .btn-lg{padding:0.75rem 1.5rem;font-size:1.05rem;}
 .btn-block{width:100%;}
 .icon{width:1rem;height:1rem;}
+.flash-mark{animation:contact-flash 1.1s linear infinite;}
+@keyframes contact-flash{0%,42%{opacity:1;}50%,92%{opacity:0.15;}100%{opacity:1;}}
+@media (prefers-reduced-motion:reduce){.flash-mark{animation:none;}}
 .main-page{padding:0;}
 .hero.hero-remodel{position:relative;padding:4.5rem 1.5rem 4rem;text-align:center;}
 .hero.hero-remodel::before{content:'';position:absolute;inset:0;background:url('assets/about-bg.png') center/cover no-repeat;z-index:0;}
@@ -190,7 +193,8 @@ a{color:inherit;text-decoration:none;}
 .faq-list details{background:var(--white);border-radius:10px;padding:1rem 1.15rem;box-shadow:var(--shadow);margin-bottom:0.75rem;}
 .faq-list summary{cursor:pointer;font-weight:700;color:var(--navy);}
 .faq-list p{margin:0.75rem 0 0;color:var(--text-muted);}
-#cities,#countries,#apostille-faq,#start{scroll-margin-top:6rem;}
+#cities,#countries,#apostille-faq,#start,#out-of-state{scroll-margin-top:6rem;}
+#out-of-state{border-bottom:1px solid rgba(212,175,55,0.45);}
 .why-content .section-title{margin-bottom:1rem;}
 .why-content p{color:rgba(255,255,255,0.88);margin:0 0 1.25rem 0;}
 .quote{margin:1.5rem 0 0 0;padding:1.25rem 1.5rem;background:rgba(0,0,0,0.2);border-left:4px solid var(--gold);border-radius:0 8px 8px 0;}
