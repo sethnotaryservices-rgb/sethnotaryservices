@@ -87,6 +87,9 @@ a{color:inherit;text-decoration:none;}
 .hero-remodel .hero-cta{display:flex;flex-wrap:wrap;gap:0.75rem;justify-content:center;}
 .certs-bar{background:rgba(212,175,55,0.12);border-top:1px solid rgba(212,175,55,0.25);border-bottom:1px solid rgba(212,175,55,0.25);padding:2rem 1.5rem;text-align:center;}
 .certs-bar-label{font-size:1rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--gold);margin:0 0 1rem 0;}
+.certs-calspro{margin:0 0 0.25rem;}
+.certs-calspro a{display:inline-block;line-height:0;}
+.certs-calspro img{width:140px;height:60px;display:block;}
 .certs-bar-badges{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:1.25rem;}
 .certs-bar-badge{height:64px;width:auto;object-fit:contain;display:block;}
 .certs-bar-cards{display:flex;flex-wrap:wrap;justify-content:center;gap:1.25rem;margin-top:1.5rem;}
