@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /seth-notary-page.html
+
+Sitemap: https://sethnotaryservices.com/sitemap.xml
